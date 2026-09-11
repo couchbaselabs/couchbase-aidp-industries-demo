@@ -1,15 +1,16 @@
 # Couchbase AIDP Industries Demo
 
-<img width="1728" height="964" alt="image" src="https://github.com/user-attachments/assets/10a05295-f1ab-4549-a1b5-fd764f3040f0" />
-<img width="1728" height="963" alt="image" src="https://github.com/user-attachments/assets/55bc3540-51ee-4d2f-ba24-28ddcdd81ee0" />
-<img width="1728" height="962" alt="image" src="https://github.com/user-attachments/assets/3b03d65e-65ab-4c8b-8269-539a45af17b7" />
-
 A single Dockerized demo of Couchbase's AI data plane, generalized across
 **ten industry verticals** a demo operator can switch between at runtime —
 (Couchbase as the operational store + context cache, real LLM/MCP calls
 routed through the [Couchbase Agent Operations Manager](../couchbase-agent-operations-manager)
 so they show up in AOM's own dashboards), but as one switchable app instead
 of one bespoke build per industry.
+
+<img width="1728" height="964" alt="image" src="https://github.com/user-attachments/assets/10a05295-f1ab-4549-a1b5-fd764f3040f0" />
+<img width="1728" height="963" alt="image" src="https://github.com/user-attachments/assets/55bc3540-51ee-4d2f-ba24-28ddcdd81ee0" />
+<img width="1728" height="962" alt="image" src="https://github.com/user-attachments/assets/033d6848-c68c-4db9-8262-9cf882502107" />
+<img width="1728" height="962" alt="image" src="https://github.com/user-attachments/assets/3b03d65e-65ab-4c8b-8269-539a45af17b7" />
 
 ```
 frontend (nginx, static JS SPA)  →  backend (FastAPI + aom_sdk)  →  couchbase (enterprise edition)
