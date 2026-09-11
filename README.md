@@ -217,6 +217,4 @@ diff against) is the only place involved.
 
 ## License
 
-Internal Couchbase demo tooling, in the same spirit as the reference
-the Agent Operations Manager repos it's built
-from — not an open-source release.
+Internal Couchbase demo tooling — not an open-source release.
