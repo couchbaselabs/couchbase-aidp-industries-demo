@@ -1,5 +1,8 @@
 # Couchbase AIDP Industries Demo
 
+<img width="1728" height="961" alt="image" src="https://github.com/user-attachments/assets/40eb1f25-2560-45d4-b7f0-25695692be24" />
+<img width="1728" height="963" alt="image" src="https://github.com/user-attachments/assets/170b783d-56d2-470d-b3c4-955d0d3f6918" />
+
 A single Dockerized demo of Couchbase's AI data plane, generalized across
 **ten industry verticals** a demo operator can switch between at runtime —
 built the same way as the reference
