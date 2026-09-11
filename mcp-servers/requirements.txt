@@ -1,0 +1,4 @@
+# Pinned to match the reference Couchbase Agent Operations Manager repo's
+# sample-mcp-servers (see that project's requirements.txt for the version
+# rationale) — let pip resolve compatible starlette/uvicorn/etc.
+mcp==1.29.1

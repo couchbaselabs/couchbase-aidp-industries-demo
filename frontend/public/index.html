@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Couchbase AIDP Industries Demo</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-left">
+      <button id="backBtn" class="icon-btn" hidden>&larr;</button>
+      <span class="logo">Couchbase</span>
+      <span class="app-name">AI Data Plane — Industries Demo</span>
+    </div>
+    <div class="topbar-right">
+      <span id="aomBadge" class="badge badge-muted">AOM: checking…</span>
+      <span id="cbBadge" class="badge badge-muted">Couchbase: checking…</span>
+    </div>
+  </header>
+
+  <main id="app">
+    <!-- Industry picker -->
+    <section id="pickerView">
+      <div class="picker-intro">
+        <h1>Choose an industry to demo</h1>
+        <p>Every card below runs on the same Couchbase AI data plane: a shared context cache, live agent decisions, and every LLM/MCP call routed through the Couchbase Agent Operations Manager.</p>
+      </div>
+      <div id="industryGrid" class="industry-grid"></div>
+    </section>
+
+    <!-- Industry dashboard -->
+    <section id="dashboardView" hidden>
+      <div class="dashboard-header">
+        <div>
+          <span id="dIcon" class="dashboard-icon"></span>
+          <h1 id="dName"></h1>
+          <p id="dTagline" class="tagline"></p>
+        </div>
+      </div>
+
+      <div class="kpi-row" id="kpiRow"></div>
+
+      <nav class="tabs">
+        <button class="tab-btn active" data-tab="feed">AI Decision Feed</button>
+        <button class="tab-btn" data-tab="copilot">Copilot</button>
+        <button class="tab-btn" data-tab="architecture">AI Architecture &amp; Demo</button>
+      </nav>
+
+      <div class="tab-panel" id="tab-feed">
+        <div class="feed-layout">
+          <div class="entity-list" id="entityList"></div>
+          <div class="entity-detail" id="entityDetail">
+            <p class="empty-hint">Select a row from the list to see agent recommendations.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-panel" id="tab-copilot" hidden>
+        <div class="copilot-layout">
+          <div class="copilot-actions" id="copilotActions"></div>
+          <div class="copilot-chat">
+            <div class="copilot-messages" id="copilotMessages"></div>
+            <form id="copilotForm" class="copilot-input-row">
+              <input id="copilotInput" type="text" placeholder="Ask the copilot anything…" autocomplete="off" />
+              <button type="submit">Send</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-panel" id="tab-architecture" hidden>
+        <div class="architecture-grid">
+          <div class="card">
+            <h3>AI Data Plane, in this app</h3>
+            <p>Every agent decision below is computed once from this industry's (simulated) system of record, then cached in Couchbase keyed by entity — a repeat look is served instantly instead of recomputed. Every LLM narration and MCP tool cross-check is routed through the Couchbase Agent Operations Manager, so it's authenticated, audited, and cached there too.</p>
+          </div>
+          <div class="card">
+            <h3>Built vs. roadmap for this industry</h3>
+            <p>This demo implements two flagship agents end-to-end for every industry. The rest of that industry's brief use-case list is named below rather than invented:</p>
+            <ul id="roadmapList"></ul>
+          </div>
+          <div class="card">
+            <h3>Agent accuracy (this session)</h3>
+            <div id="accuracyTable"></div>
+          </div>
+          <div class="card">
+            <h3>Demo: simulate concurrent operators</h3>
+            <p>Runs real decision/copilot calls across this industry's entities so the Couchbase context-cache and AOM LLM-cache hit rates climb the way they would under real concurrent usage.</p>
+            <div class="demo-controls">
+              <label>Operators: <input id="demoOperators" type="number" value="25" min="1" max="200" /></label>
+              <button id="demoStartBtn">Start</button>
+              <button id="demoStopBtn" disabled>Stop</button>
+            </div>
+            <p id="demoStatus" class="demo-status">Not running.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
