@@ -1,7 +1,7 @@
 # Couchbase AIDP Industries Demo
 
-<img width="1728" height="961" alt="image" src="https://github.com/user-attachments/assets/40eb1f25-2560-45d4-b7f0-25695692be24" />
-<img width="1728" height="963" alt="image" src="https://github.com/user-attachments/assets/170b783d-56d2-470d-b3c4-955d0d3f6918" />
+<img width="1728" height="964" alt="image" src="https://github.com/user-attachments/assets/10a05295-f1ab-4549-a1b5-fd764f3040f0" />
+<img width="1728" height="963" alt="image" src="https://github.com/user-attachments/assets/55bc3540-51ee-4d2f-ba24-28ddcdd81ee0" />
 <img width="1728" height="962" alt="image" src="https://github.com/user-attachments/assets/3b03d65e-65ab-4c8b-8269-539a45af17b7" />
 
 A single Dockerized demo of Couchbase's AI data plane, generalized across
