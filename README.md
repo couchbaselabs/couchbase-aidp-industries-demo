@@ -5,8 +5,6 @@
 
 A single Dockerized demo of Couchbase's AI data plane, generalized across
 **ten industry verticals** a demo operator can switch between at runtime —
-built the same way as the reference
-[Procurement Command Center](../couchbase-procurement-command-center) app
 (Couchbase as the operational store + context cache, real LLM/MCP calls
 routed through the [Couchbase Agent Operations Manager](../couchbase-agent-operations-manager)
 so they show up in AOM's own dashboards), but as one switchable app instead
